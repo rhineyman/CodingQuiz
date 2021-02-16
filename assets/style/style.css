@@ -1,0 +1,55 @@
+header {
+    background-color: green;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+body {
+    background-color: red;
+    
+}
+
+main {
+    display: flex;    
+    justify-content: center;
+    background-color: blue;
+}
+
+aside {
+    display: flex;
+    justify-content: center;    
+    background-color: indigo;
+    color: white;    
+}
+li {
+    background-color: orangered;
+    padding: 5px;
+    margin: 5px;
+    font-size: larger;
+}
+
+a:link{
+    color:white;
+    text-decoration: none;
+  }
+  a:visited{
+    color:white;
+    text-decoration: none;
+  }
+  a:hover{
+    color:white;
+    text-decoration: underline;
+  }
+  a:focus{
+    color:white;
+  }
+  a:active{
+    color:white;
+    text-decoration: none;
+  }
+
+footer {
+    display: flex;
+    justify-content: space-between;
+}
