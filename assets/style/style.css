@@ -2,11 +2,19 @@ header {
     background-color: green;
     display: flex;
     justify-content: space-between;
+    margin: 5px;
 }
-
-
+h1 {
+    margin: 20px;
+}
+h2 {
+    margin: 20px;
+}
 body {
     background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     
 }
 
@@ -14,13 +22,15 @@ main {
     display: flex;    
     justify-content: center;
     background-color: blue;
+    margin: 5px;
 }
 
 aside {
     display: flex;
     justify-content: center;    
     background-color: indigo;
-    color: white;    
+    color: white;
+    margin: 5px;    
 }
 li {
     background-color: orangered;
@@ -38,8 +48,8 @@ a:link{
     text-decoration: none;
   }
   a:hover{
-    color:white;
-    text-decoration: underline;
+    color:black;
+    text-decoration: underline;    
   }
   a:focus{
     color:white;
@@ -52,4 +62,10 @@ a:link{
 footer {
     display: flex;
     justify-content: space-between;
+    background-color: green;
+    margin: 5px;
+}
+
+li:hover, a:hover {
+    background-color: aqua;
 }
