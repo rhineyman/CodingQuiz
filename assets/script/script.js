@@ -19,7 +19,8 @@ console.log("You linked that shit brah")
 // if (answer===true) { clear qustion/answers -- run next question ++score}
 
 //when last question is answered prompt to add 3 character initials to highscore
-//if (x<3 || x>3) { yo dawg i said only 3}
+
+//if (x < 3 || x > 3) { yo dawg i said only 3}
 //after input post new highscore input *initials + score* to highscore alert 
 
 //post highest score from prompt to bottom right
@@ -31,3 +32,22 @@ console.log("You linked that shit brah")
 //     maybe we fill functions with questions that are callled on to fill parameters?
 //     no randomisation should have to happen 
 // }
+const StartButton = document.getElementById("startBtn");
+const qustionElement = document.getElementById("question-container");
+
+StartButton.addEventListener("click", startQuiz);
+
+
+function startQuiz () {
+    console.log("started");
+    StartButton.classList.add("hide");
+    qustionElement.classList.remove("hide");
+}
+
+function nextQuestion() {
+
+}
+
+function selectAnswer() {
+
+}

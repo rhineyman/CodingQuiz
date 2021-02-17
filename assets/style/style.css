@@ -1,21 +1,50 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 header {
     background-color: green;
     display: flex;
     justify-content: space-between;
     margin: 5px;
 }
-h1 {
+h1, h2 {
     margin: 20px;
 }
-h2 {
-    margin: 20px;
-}
+
 body {
     background-color: red;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     
+}
+
+.button-grid{
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+}
+
+.btn {
+  font-size: 1rem;
+  border-radius: 5px;
+  padding: 5px 10x;
+  outline: none;
+}
+
+.btn.correct{
+  background-color: green;
+}
+
+.btn.wrong{
+  background-color: red;
+}
+
+.startBtn, .nextQues{
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px 20px;
 }
 
 main {
@@ -32,32 +61,7 @@ aside {
     color: white;
     margin: 5px;    
 }
-li {
-    background-color: orangered;
-    padding: 5px;
-    margin: 5px;
-    font-size: larger;
-}
 
-a:link{
-    color:white;
-    text-decoration: none;
-  }
-  a:visited{
-    color:white;
-    text-decoration: none;
-  }
-  a:hover{
-    color:black;
-    text-decoration: underline;    
-  }
-  a:focus{
-    color:white;
-  }
-  a:active{
-    color:white;
-    text-decoration: none;
-  }
 
 footer {
     display: flex;
@@ -66,6 +70,7 @@ footer {
     margin: 5px;
 }
 
-li:hover, a:hover {
-    background-color: aqua;
-}
+/* .hide {
+  display: none;
+} */
+
