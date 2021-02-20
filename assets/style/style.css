@@ -31,7 +31,7 @@ body {
   border-radius: 5px;
   padding: 5px 10x;
   outline: none;
-  
+  background-color: whitesmoke;  
 }
 
 .btn.correct{
@@ -53,6 +53,7 @@ main {
     justify-content: center;
     background-color: blue;
     margin: 5px;
+    font-size: 3.5rem;
 }
 
 aside {
