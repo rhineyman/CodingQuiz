@@ -66,9 +66,9 @@ function scoreReset() {
 
 
 function Timer() {
-    var startCount = 100;
+    var startCount = 50;
     const stopCount = 0,
-        duration = 50000,
+        duration = 10000,
         countDownElement = document.getElementById('timer'),
         intervalTime = duration / Math.abs(startCount - stopCount);
 
@@ -80,7 +80,9 @@ function Timer() {
             if (startCount > stopCount) {
                 startCount--
             } else {
-                startCount++
+              startButton.innerText = 'Restart';
+              startButton.classList.remove('hide');
+              var highscore = prompt("Enter your initials"); 
             }
         },
         intervalTime       
@@ -111,10 +113,9 @@ function setNextQuestion() {
 function selectAnswer() {        
     
     if (shuffledQuestions.length > currentQuestionIndex + 1) { 
-        shuffledQuestions = questions.sort(() => Math.random() - .5)
-  currentQuestionIndex = currentQuestionIndex
+        shuffledQuestions = questions.sort(() => Math.random() - .5) 
+        setNextQuestion()
   
-  setNextQuestion()
 } else {     
       startButton.innerText = 'Restart';
       startButton.classList.remove('hide');    
@@ -153,36 +154,72 @@ const questions = [
         question: 'What is 2 + 2?',
         answers: [
             { text: '4', correct: true },
-            { text: '6', wrong: false },
-            { text: '8', wrong: false },
-            { text: '22', wrong: false }
+            { text: '6', correct: false },
+            { text: '8', correct: false },
+            { text: '22', correct: false }
         ]
     },
     {
         question: 'Which command will log array length',
         answers: [
-            { text: 'console.log(array.length)', wrong: true },
+            { text: 'console.log(array.length)', correct: true },
             { text: 'console.array.length', correct: false },
-            { text: 'length.array', wrong: false },
-            { text: 'array.length', wrong: false }
+            { text: 'length.array', correct: false },
+            { text: 'array.length', correct: false }
         ]
     },
     {
         question: 'Is web development fun?',
         answers: [
-            { text: 'Kinda', wrong: false },
+            { text: 'Kinda', correct: false },
             { text: 'YES!!!', correct: true },
-            { text: 'no', wrong: false },
-            { text: 'IDK', wrong: false }
+            { text: 'no', correct: false },
+            { text: 'IDK', correct: false }
         ]
     },
     {
-        question: 'What is 4 * 2?',
+        question: 'Which school is best?',
         answers: [
-            { text: '6', wrong: false },
-            { text: '8', correct: true },
-            { text: '4', wrong: false },
-            { text: '22', wrong: false }
+            { text: 'OSU', correct: false },
+            { text: 'OU', correct: true },
+            { text: 'UofA', correct: false },
+            { text: 'UT', correct: false }
         ]
-    }
+    },
+    {
+      question: '5 * 5',
+      answers: [
+          { text: '6', correct: false },
+          { text: '25', correct: true },
+          { text: '4', correct: false },
+          { text: '22', correct: false }
+      ]
+   },
+   {
+    question: '3 + 3',
+    answers: [
+        { text: '6', correct: false },
+        { text: '3', correct: true },
+        { text: '4', correct: false },
+        { text: '22', correct: false }
+    ]
+  },
+  {
+  question: 'x = 3 + 3, x=',
+  answers: [
+      { text: '8', correct: false },
+      { text: '6', correct: true },
+      { text: '4', correct: false },
+      { text: '22', correct: false }
+  ]
+  },
+  {
+  question: '11 * 2',
+  answers: [
+      { text: '6', correct: false },
+      { text: '8', correct: false },
+      { text: '4', correct: false },
+      { text: '22', correct: true }
+  ]
+  },
 ]
