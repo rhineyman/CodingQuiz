@@ -4,7 +4,7 @@
 
 header {
     background-color: green;
-    display: flex;
+    display: flex;    
     justify-content: space-between;
     margin: 5px;
 }
@@ -13,10 +13,10 @@ h1, h2 {
 }
 
 body {
-    background-color: red;
+    background-color: grey;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-between;    
     
 }
 
@@ -31,6 +31,7 @@ body {
   border-radius: 5px;
   padding: 5px 10x;
   outline: none;
+  
 }
 
 .btn.correct{
@@ -70,7 +71,9 @@ footer {
     margin: 5px;
 }
 
-/* .hide {
+
+
+.hide {
   display: none;
-} */
+} 
 

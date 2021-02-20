@@ -10,16 +10,15 @@
 
 <header>
     <h1>Coding Quiz</h1>
-    <h2>Score:  9999<!--reference score--> </h2>
+    <h2>SCORE : <span id="score"></span></h2>
 </header>
 
 <body>    
-    <main class="question-container" class="hide">
-        <h2 id="questions">Questions will go here</h2>
-        
+    <main class="questionContainer">
+        <h2 id="question"></h2>        
     </main>
 
-<aside id="answer-buttons" class="button-grid">
+<aside id="answerButtons" class="button-grid">
         <button class="btn">Answer 1</button>
         <button class="btn">Answer 2</button>
         <button class="btn">Answer 3</button>
@@ -28,8 +27,8 @@
 
 <footer class="controls">
     <button id="startBtn" class="startBtn Btn">Start</button>
-    <button id="nextQues" class="nextQues hide">Next Question</button>
-    <h2>Time Left :  99</h2>
+    
+    <h2>Time Left : <span id="timer"></span></h2>
     <h2>High Score :  ABC 9999</h2>
 
 </footer>
