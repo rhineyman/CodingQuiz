@@ -45,7 +45,7 @@ var highName = [""];
 
 var highScoreList = [];
 
-highScoreElement.innerHTML = highScoreList[0];
+highScoreElement.innerHTML = "ABC123";
 
 
 startButton.addEventListener("click", startQuiz);
