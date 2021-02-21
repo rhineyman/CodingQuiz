@@ -36,12 +36,17 @@ const questionElement = document.getElementById('question');
 const startButton = document.getElementById("startBtn");
 const questionContainerElement = document.getElementById("questionContainer");
 const answerButton = document.getElementById("answerButtons");
+const highScoreElement = document.getElementById("highScore");
 
 // change score to a # value
 
-var currentScore = 0
-var highName = ""
-var highScoreList = [""]
+var currentScore = [0];
+var highName = [""];
+
+var highScoreList = ["AAA 9"];
+
+highScoreElement.innerHTML = highScoreList[0];
+
 
 startButton.addEventListener("click", startQuiz);
 
@@ -88,7 +93,7 @@ function Timer() {
         startButton.innerText = 'Restart';
         startButton.classList.remove('hide');
         var highscoreName = prompt("Enter your initials");        
-        highName = highscoreName;
+        highName = highscoreName;       
         
 
         resetState();
@@ -116,13 +121,15 @@ function setNextQuestion() {
   showQuestion(shuffledQuestions[currentQuestionIndex]);
 }
 
-function selectAnswer() {
+function selectAnswer() {  
+  
   currentScore++;
+  
   scoreElement = document.getElementById("score");
   scoreElement.innerHTML = currentScore;
   
-  if (shuffledQuestions.length > currentQuestionIndex + 1) {
-    shuffledQuestions = questions.sort(() => Math.random() - .5)
+  if (shuffledQuestions.length > currentQuestionIndex + 1) {    
+    currentQuestionIndex++;
     setNextQuestion();
 
   } else {
@@ -130,6 +137,7 @@ function selectAnswer() {
     startButton.classList.remove('hide');
   }
   console.log(currentScore);
+
 }
 
 
