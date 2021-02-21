@@ -91,6 +91,7 @@ function Timer() {
         startCount--
       } else {
         startButton.innerText = 'Restart';
+        questionElement.innerText = "GAME OVER!";
         startButton.classList.remove('hide');
         var highscoreName = prompt("Enter your initials");        
         highName = highscoreName;       
