@@ -4,3 +4,4 @@ video: https://www.youtube.com/watch?v=riDzcEQbX6k
 getting everything to work without breaking something else has been very difficult and has been a buggy mess the whole way.
 
 link to deployment : https://rhineyman.github.io/CodingQuiz/
+image of deployed site in assets
