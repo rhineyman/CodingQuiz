@@ -43,7 +43,7 @@ const highScoreElement = document.getElementById("highScore");
 var currentScore = [0];
 var highName = [""];
 
-var highScoreList = ["AAA 9"];
+var highScoreList = [];
 
 highScoreElement.innerHTML = highScoreList[0];
 
@@ -95,8 +95,8 @@ function Timer() {
         startButton.classList.remove('hide');
         var highscoreName = prompt("Enter your initials");        
         highName = highscoreName;       
-        
-
+        highScoreList.push(highName + currentScore);
+        highScoreElement.innerHTML = highScoreList[0];
         resetState();
       }
     },
